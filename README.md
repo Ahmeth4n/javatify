@@ -37,7 +37,7 @@ Proxies are kept in this format in the Settings tab in the interface;
 The proxies you add in this format will be used when running the tasks with the Proxy status `True`.
 When adding proxies, remember that after each proxy you need to skip to a `new line!`
 
-### Donations
+## Donations
 If the project worked for you and you want to support me, you can buy me a coffee as much as you want by clicking the **"Buy me a coffee"** button below :=)
 
 [!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/fbyte)
