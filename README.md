@@ -25,9 +25,9 @@ Spotify uses short URLs `spotify:artist:xxxxxxxx` -` spotify:playlist:xxxxxx` in
 for `FOLLOW - LIKE - SAVE` task types.
 
 #### Example usage (for Follow - Like - Save tasks)
-spotify:artist:4kzJtf1HMdOfQgr0B5vqua - `Correct` usage
+```spotify:artist:4kzJtf1HMdOfQgr0B5vqua``` - `Correct` usage
 
-https://open.spotify.com/artist/4kzJtf1HMdOfQgr0B5vqua - `Wrong` usage
+```https://open.spotify.com/artist/4kzJtf1HMdOfQgr0B5vqua``` - `Wrong` usage
 
 ### Proxy Formats
 Proxies are kept in this format in the Settings tab in the interface;
