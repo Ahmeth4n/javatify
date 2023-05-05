@@ -1,0 +1,6 @@
+syntax = "proto3";
+
+message GetPlaylistKey{
+optional bytes playlistKey = 1;
+optional bytes playlistKeyArr = 6;
+}

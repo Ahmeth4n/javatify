@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.3/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+
+    <title>dashboard</title>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" th:href="@{../}">Homepage</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" th:href="@{../users}">Users</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" th:href="@{../tasks}">Tasks</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" th:href="@{../servers}">Servers</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" th:href="@{../settings}">Settings</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" th:href="@{../server-reports}">Server Reports</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" th:href="@{../logout}">Logout</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<div style="width:100% !important;margin-top:2rem;"></div>
+
+<div class="container">
+    <div class="panel panel-default">
+        <div class="panel-body">
+            Users settings
+            <hr>
+            <a th:href="'../users'">List users</a><br>
+            <a th:href="'../users/create'">Create spotify account (account farm)</a><br>
+        </div>
+    </div>
+</div>
+
+<div style="width:100% !important;margin-top:2rem;"></div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <form id="createFrm">
+
+                <div class="form-group">
+                    <label for="accountCount">Created Account Count:</label>
+                    <input type="number" class="form-control" name="accountCount" id="accountCount" placeholder="Account Count:" min="1">
+                    <br>
+                </div>
+
+                <div class="form-group">
+                    <label for="thread">Thread Count:</label>
+                    <input type="number" class="form-control" name="thread" id="thread" placeholder="Thread Count:" max="50" min="1">
+                    <span><strong>WARNING!</strong> You have <span th:text="${core}"></span> core processor. If you write high values on this input, your server may be crash. </span>
+                    <br>
+                </div>
+
+                <div class="form-group">
+                    <label for="isProxyEnabled">Proxy</label>
+                    <select name="isProxyEnabled" id="isProxyEnabled" class="form-control">
+                        <option value="true">Enabled</option>
+                        <option value="false">Disabled</option>
+                    </select>
+                </div>
+
+
+
+                <button type="button" id="startBtn" class="btn btn-primary">Start</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.3.min.js"
+        integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.datatables.net/1.13.3/js/jquery.dataTables.min.js"></script>
+
+<script>
+    $(document).ready(function () {
+        $("#startBtn").click(function(){
+            $.ajax({
+                type: "POST",
+                url: "../api/account/create",
+                dataType: "json",
+                data: $("#createFrm").serialize(),
+                success: function(response){
+                    if (response.status){
+                        alert(response.message);
+                    }else{
+                        alert(response.message);
+                    }
+                }
+            });
+        });
+    });
+</script>
+</body>
+</html>

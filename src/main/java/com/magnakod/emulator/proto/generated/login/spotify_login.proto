@@ -1,0 +1,78 @@
+syntax = "proto3";
+
+message LoginMessage{
+optional DeviceCred deviceCred = 1;
+optional UserInformation userInformation = 101;
+}
+
+message DeviceCred{
+optional string clientId = 1;
+optional string deviceId = 2;
+}
+
+message UserInformation{
+optional string email = 1;
+optional string password = 2;
+optional ChallengeType challengeType = 3;
+}
+
+message ChallengeType{
+repeated int32 challengeId = 2;
+}
+
+
+
+message LoginResponse{
+optional ChallengeResponse creds = 3;
+optional bytes loginToken  = 5;
+}
+message ChallengeResponse{
+optional ChallengeObject challengeObject = 1;
+
+}
+message ChallengeObject{
+optional ChallengeCredentials challengeCredentials = 1;
+}
+message ChallengeCredentials{
+optional bytes challengeToken = 1;
+optional int32 challengeType = 2;
+}
+
+
+
+
+message FullLogin{
+optional DeviceCred deviceCred = 1;
+optional bytes storedToken = 2;
+optional ChallengeMessage loginTokenMessage = 3;
+optional UserInformation userInformation = 101;
+}
+
+message ChallengeMessage{
+optional FullChallengeObject challengeObject = 1;
+
+}
+message FullChallengeObject{
+optional ChallengeSolve challengeSolve = 1;
+}
+message ChallengeSolve{
+optional bytes hashcashToken = 1;
+optional SessionNumber sessionNumber = 2;
+}
+message SessionNumber{
+optional int32 sessionData = 2;
+}
+
+
+
+message LoginSessionResponse{
+    optional SessionCredentials sessionCredentials = 1;
+}
+
+
+message SessionCredentials{
+    optional string username = 1;
+    optional string authenticationToken = 2;
+    optional string storedToken = 3;
+    optional int32 sessionExpireTime = 4;
+}
