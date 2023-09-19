@@ -1,4 +1,6 @@
 # Javatify (Spotify Full Mobile API) 
+
+
 `( HALF DEPRECATED )`
 
 Some parts of the application stopped working with the Spotify update. If you want to use the application as stable as before, you can purchase the updated version by contacting me at ahmeth4n@gmail.com.
