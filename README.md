@@ -1,4 +1,11 @@
-# Javatify (Spotify Full Mobile API)
+# Javatify (Spotify Full Mobile API) 
+`( HALF DEPRECATED )`
+Some parts of the application stopped working with the Spotify update. If you want to use the application as stable as before, you can purchase the updated version by contacting me at ahmeth4n@gmail.com.
+
+---
+
+
+
 **Javatify** is the unofficial API of the reverse-engineered mobile (Android) version of Spotify. Developed with Java - Spring Boot, this project has been turned into a web interface with a simple (*to be honest ugly*) interface.
 
 In the project, **MongoDB** was used as the database and **RabbitMQ** was used for the task queues. You can quickly build and use the project with docker using the `docker-compose` file.
