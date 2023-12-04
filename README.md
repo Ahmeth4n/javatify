@@ -1,12 +1,12 @@
 # Javatify (Spotify Full Mobile API) 
 
 
-## Important Update Information (05.12.2023)
-
-Javatify now supports mobile streaming. Streams will be reflected in your statistics as a mobile device. But I do not plan to release this version publicly. Those who want to buy can contact me at ahmeth4n@gmail.com.
+# Important Update Information (05.12.2023)
 ---
-
-
+---
+- Javatify now `supports mobile streaming`. Streams will be reflected in your statistics as a mobile device. But I do not plan to release this version publicly. Those `who want to buy` can contact me at **ahmeth4n@gmail.com** . 
+---
+---
 
 **Javatify** is the unofficial API of the reverse-engineered mobile (Android) version of Spotify. Developed with Java - Spring Boot, this project has been turned into a web interface with a simple (*to be honest ugly*) interface.
 
@@ -55,7 +55,7 @@ If the project worked for you and you want to support me, you can buy me a coffe
 ### Stream Integration
 
 (updated on 05.12.2023)
-Javatify now supports mobile streaming. Streams will be reflected in your statistics as a mobile device. But I do not plan to release this version publicly. Those who want to buy can contact me at ahmeth4n@gmail.com.
 
+Javatify now `supports mobile streaming`. Streams will be reflected in your statistics as a mobile device. But I do not plan to release this version publicly. Those `who want to buy` can contact me at **ahmeth4n@gmail.com** . 
 
 
