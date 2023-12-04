@@ -1,10 +1,9 @@
 # Javatify (Spotify Full Mobile API) 
 
 
-`( HALF DEPRECATED )`
+## Important Update Information (05.12.2023)
 
-Some parts of the application stopped working with the Spotify update. If you want to use the application as stable as before, you can purchase the updated version by contacting me at ahmeth4n@gmail.com.
-
+Javatify now supports mobile streaming. Streams will be reflected in your statistics as a mobile device. But I do not plan to release this version publicly. Those who want to buy can contact me at ahmeth4n@gmail.com.
 ---
 
 
@@ -55,11 +54,8 @@ If the project worked for you and you want to support me, you can buy me a coffe
 
 ### Stream Integration
 
-Stream operations are integrated in the panel, but unfortunately I do not have a working method for now. In the past, we were able to stream smoothly with Selenium by applying various patches to chromedriver and giving certain parameters. (like removing *cdc_* strings)
-
-At the moment, I was running the selenium script written in python on the servers added in the **Servers** section of the panel. The script was listening to the tasks in *RabbitMQ*, taking the tasks as they came and providing the stream operation. It was checking whether these servers are still running in the *ServerScheduler*, which runs every 1 hour in the project.
-
-I did the integration according to this structure, but it doesn't work now. Friends who want to advance / develop the project can change / advance this structure. I will **not update** this project any more.
+(updated on 05.12.2023)
+Javatify now supports mobile streaming. Streams will be reflected in your statistics as a mobile device. But I do not plan to release this version publicly. Those who want to buy can contact me at ahmeth4n@gmail.com.
 
 
 
